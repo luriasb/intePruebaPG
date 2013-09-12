@@ -1,0 +1,16 @@
+<h4 class="question_<%= i %>" > <%= question %>  </h4>
+<div class="answers_<%= i %> topcoat-list__container">
+<ul class="topcoat-list">
+    <%  var j = 1;
+        _.each(answers, function(answer){ %>
+        <li class="topcoat-list__item">
+        <%   if (answer){ 
+            j++
+            %>
+                <input type="radio" id="ques<%= i +'_'+ j %>" name="question<%= i %>" value="<%= j %>" > <label for="ques<%= i +'_'+ j %>" class='topcoat-radio-label--left'><%= answer %></label>  
+        </li>
+        <%   }  %>
+     <%   });  %>
+</ul>  
+    
+</div>
